@@ -2,8 +2,8 @@ package com.silverhetch.horae;
 
 public class Sample implements MessageHandle {
     @Override
-    public int messageType() {
-        return 0;
+    public String messageType() {
+        return "";
     }
 
     @Override
