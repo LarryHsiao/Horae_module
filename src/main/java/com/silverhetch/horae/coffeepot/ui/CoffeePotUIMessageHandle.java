@@ -16,10 +16,6 @@ public class CoffeePotUIMessageHandle implements MessageHandle {
 
     @Override
     public void onReceive(String message) {
-        switch (message) {
-            case Const.STATE:
-                coffeePotUI.updateState(message);
-                break;
-        }
+        coffeePotUI.updateState(message);
     }
 }

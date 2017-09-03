@@ -1,6 +1,5 @@
 package com.silverhetch.horae.coffeepot;
 
-import com.google.gson.JsonObject;
 import com.silverhetch.horae.Message;
 
 public class RequestCoffeePotState implements Message {
@@ -11,8 +10,6 @@ public class RequestCoffeePotState implements Message {
 
     @Override
     public String content() {
-        JsonObject jsonObject = new JsonObject();
-        jsonObject.addProperty("contentType", Const.COFFEE_POT_STATE);
-        return jsonObject.toString();
+        return Const.COFFEE_POT_STATE;
     }
 }
