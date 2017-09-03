@@ -3,18 +3,16 @@ package com.silverhetch.horae.coffeepot;
 import com.google.gson.JsonObject;
 import com.silverhetch.horae.Message;
 
-import static com.silverhetch.horae.coffeepot.Const.MESSAGE_TYPE_COFFEE_POT;
-
-public class MakeCoffee implements Message {
+public class RequestCoffeePotState implements Message {
     @Override
     public String messageType() {
-        return MESSAGE_TYPE_COFFEE_POT;
+        return Const.MESSAGE_TYPE_COFFEE_POT;
     }
 
     @Override
     public String content() {
         JsonObject jsonObject = new JsonObject();
-        jsonObject.addProperty("contentType", Const.MAKE_COFFEE);
+        jsonObject.addProperty("contentType", Const.COFFEE_POT_STATE);
         return jsonObject.toString();
     }
 }
